@@ -1,0 +1,53 @@
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Form</title>
+        <style>
+            body {font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ; text-align:center}
+            .title {background-color:#c6b6a0a0; color:white; padding:75px}
+            h1 {margin:1px}
+            .exp {border-top:2px solid #ffffff; margin-top:3px}
+            h3 {margin:5; margin-top:25px}
+            p {margin:10px}
+            input {border-radius:999px; border:1px solid rgb(102, 102, 102); height:23px; width:230px; text-align:center}
+            select {border-radius:999px ;border:1px solid rgb(102, 102, 102); height:23px; width:70px; text-align:center}
+            button {font-size:17px; border-radius:999px; border:1px solid rgb(102, 103, 102);background-color: rgba(178, 178, 178, 0.305); height:27px; width:80px; text-align:center}
+        </style>
+    </head>
+    <body>
+        <div class="title">
+            <h1>Regular order app</h1>
+            <div class="exp">過去8期間のデータによる定期発注方式の発注量の計算</div>
+            <br>
+            <div >発注間隔 ▶ 4期間</div>
+        </div>
+        <form method="POST">
+            <h3>欠品許容率の選択</h3>
+                <p><select name="defict">
+                    <option>0.1%</option>
+                    <option>1.0%</option>
+                    <option>2.0%</option>
+                    <option>5.0%</option>
+                    <option>10.0%</option>
+                    <option>20.0%</option>
+                    <option>30.0%</option>
+                </select></p>
+            <h3>消費数の入力</h3>
+                <p><input type="text" name="span1" placeholder=" 期間1の消費量を入力してください "></p>
+                <p><input type="text" name="span2" placeholder=" 期間2の消費量を入力してください "></p>
+                <p><input type="text" name="span3" placeholder=" 期間3の消費量を入力してください "></p>
+                <p><input type="text" name="span4" placeholder=" 期間4の消費量を入力してください "></p>
+                <p><input type="text" name="span5" placeholder=" 期間5の消費量を入力してください "></p>
+                <p><input type="text" name="span6" placeholder=" 期間6の消費量を入力してください "></p>
+                <p><input type="text" name="span7" placeholder=" 期間7の消費量を入力してください "></p>
+                <p><input type="text" name="span8" placeholder=" 期間8の消費量を入力してください "></p>
+            </div>
+            <h3>現在の在庫数の入力</h3>
+                <p><input type="text" name="stock" placeholder="現在の在庫数を入力してください"></p>
+            <h3>発注済未入荷量の入力</h3>
+                <p><input type="text" name="no-in" placeholder="発注済未入荷量を入力してください"></p>
+            <br>
+                <p><button type="submit" name="submit">Execute</button></p>
+        </form>
+    </body>
+</html>
